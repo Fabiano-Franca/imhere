@@ -7,10 +7,10 @@ export function Home() {
         console.log("Você clicou no botão de Adicionar!");
     }
 
-    function handleParticipantRemove() {
+    function handleParticipantRemove(name: string) {
         //Essa função será passada por parâmetro para
         // o componente Participant e será executada dentro deste componente
-        console.log("Função executada");
+        console.log(`Você clicou em remover o participante ${name}`);
     }
 
   return (
@@ -34,10 +34,10 @@ export function Home() {
             </TouchableOpacity>
         </View>
 
-        <Participant name="Fabiano França" onRemove={handleParticipantRemove} />
-        <Participant name='Lorena Portela' onRemove={handleParticipantRemove} />
-        <Participant name='Márcio Giovanni' onRemove={handleParticipantRemove} />
-        <Participant name='Flávia Araújo' onRemove={handleParticipantRemove} />
+        <Participant name="Fabiano França" onRemove={() => handleParticipantRemove("Fabiano")} />
+        <Participant name='Lorena Portela' onRemove={() => handleParticipantRemove("Lorena")} />
+        <Participant name='Márcio Giovanni' onRemove={() => handleParticipantRemove("Márcio")} />
+        <Participant name='Flávia Araújo' onRemove={() => handleParticipantRemove("Flávia")} />
     </View>
   );
 }
