@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#131016',
-        padding: 24
+        padding: 24,
     },
     eventName: {
         color: '#FDFCFE',
@@ -17,12 +17,14 @@ export const styles = StyleSheet.create({
         fontSize: 16
     },
     input: {
+        flex: 1, //Empurra o botão
         height: 56,
         backgroundColor: '#1F1E25',
         borderRadius: 5,
         color: '#FFF',
         padding: 16,
-        fontSize: 16
+        fontSize: 16,
+        marginRight: 12
     },
     buttonText: {
         color: '#FFF',
@@ -37,7 +39,9 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     form: {
-        display: 'flex',
-        flexDirection: 'row'
+        width: '100%',
+        flexDirection: 'row',
+        marginTop: 36,
+        marginBottom: 42
     }
 });

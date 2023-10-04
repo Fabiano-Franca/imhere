@@ -1,5 +1,6 @@
 import { GestureResponderEvent, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { styles } from './styles';
+import { Participant } from '../../components/participant';
 
 export function Home() {
     function handleParticipantAdd(event: GestureResponderEvent): void {
@@ -26,6 +27,11 @@ export function Home() {
                 </Text>
             </TouchableOpacity>
         </View>
+
+        <Participant />
+        <Participant />
+        <Participant />
+        <Participant />
     </View>
   );
 }
