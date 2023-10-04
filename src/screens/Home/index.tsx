@@ -7,6 +7,12 @@ export function Home() {
         console.log("Você clicou no botão de Adicionar!");
     }
 
+    function handleParticipantRemove() {
+        //Essa função será passada por parâmetro para
+        // o componente Participant e será executada dentro deste componente
+        console.log("Função executada");
+    }
+
   return (
     <View style={styles.container}>
         <Text style={styles.eventName}>
@@ -28,10 +34,10 @@ export function Home() {
             </TouchableOpacity>
         </View>
 
-        <Participant name="Fabiano França" />
-        <Participant name='Lorena Portela' />
-        <Participant name='Márcio Giovanni' />
-        <Participant name='Flávia Araújo' />
+        <Participant name="Fabiano França" onRemove={handleParticipantRemove} />
+        <Participant name='Lorena Portela' onRemove={handleParticipantRemove} />
+        <Participant name='Márcio Giovanni' onRemove={handleParticipantRemove} />
+        <Participant name='Flávia Araújo' onRemove={handleParticipantRemove} />
     </View>
   );
 }
