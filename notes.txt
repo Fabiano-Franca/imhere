@@ -3,3 +3,6 @@ Imutabilidade -> só pode atualizar o conteúdo de um estado através de uma fun
 
 setParticipants(prevState => [prevState, 'Mozão']); === ['Fabiano', 'Alícia'] => [['Fabiano', 'Alícia'], 'Mozão']; Joga o array inteiro dentro do array novo.
 setParticipants(prevState => [...prevState, 'Mozão']); === ['Fabiano'] => ['Fabiano', 'Alícia', 'Mozão']; Desestrutura o array para pegar todo seu seu conteúdo e jogar dentro de novo array.
+
+Biblioteca de comandos:
+onChangeText={text => console.log(text)} => dispara um evento sempre que o conteúdo da caixa de texto muda.
