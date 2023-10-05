@@ -1,0 +1,5 @@
+O hooks (useState, useEffect) utilizam o princípio da imutabilidade, que diz:
+Imutabilidade -> só pode atualizar o conteúdo de um estado através de uma função.
+
+setParticipants(prevState => [prevState, 'Mozão']); === ['Fabiano', 'Alícia'] => [['Fabiano', 'Alícia'], 'Mozão']; Joga o array inteiro dentro do array novo.
+setParticipants(prevState => [...prevState, 'Mozão']); === ['Fabiano'] => ['Fabiano', 'Alícia', 'Mozão']; Desestrutura o array para pegar todo seu seu conteúdo e jogar dentro de novo array.

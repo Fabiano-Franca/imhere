@@ -1,15 +1,18 @@
 import { FlatList, GestureResponderEvent, Alert, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { styles } from './styles';
 import { Participant } from '../../components/participant';
+import { useState } from 'react';
 
 export function Home() {
-
-    const participants = ['Fabiano', 'Lorena', 'Márcio', 'Felipe', 'Lucas', 'Flávia', 'Flávio', 'Samuel', 'Fred', 'Chardson'];
-
+    const [participants, setParticipants] = useState(['Fabiano', 'Alícia'])
+    
     function handleParticipantAdd(): void {
-        if(participants.includes('Fabiano')){
+        if(participants.includes('Mathues')){
             return Alert.alert('Participante existe', 'Já existe um participante na lista com esse nome. ')
         }
+
+        //setParticipants(prevState => [prevState, 'Mozão']); === ['Fabiano', 'Alícia'] => [['Fabiano', 'Alícia'], 'Mozão']; Joga o array inteiro dentro do array novo.
+        setParticipants(prevState => [...prevState, 'Mozão']); // === ['Fabiano'] => ['Fabiano', 'Alícia', 'Mozão']; Desestrutura o array para pegar todo seu seu conteúdo e jogar dentro de novo array.
     }
 
     function handleParticipantRemove(name: string) {
