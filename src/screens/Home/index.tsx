@@ -36,9 +36,17 @@ export function Home() {
                 </Text>
             </TouchableOpacity>
         </View>
+        {/* 
+            ScrollView renderiza todos os seus componentes filhos de reação 
+            de uma só vez, mas isso tem uma desvantagem de desempenho.
 
+            FlatList renderiza itens lentamente, quando eles estão prestes a 
+            aparecer, e remove itens que rolam para fora da tela para 
+            economizar memória e tempo de processamento.
+            
+        */}
         <FlatList 
-            data={[]}
+            data={participants}
             keyExtractor={item => item}
             renderItem={({ item }) => (
                 <Participant 
