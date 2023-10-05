@@ -17,6 +17,16 @@ setParticipants(prevState => [...prevState, 'Mozão']); === ['Fabiano'] => ['Fab
 Antes dos seus componentes serem exibidos na tela eles devem ser renderizados
 pelo React.
 
+* Entendendo Estado Assíncrono
+Todo estado é assíncrono. 
+
+* Debug
+console.log(var);
+console.log('Titulo', var);
+console.warn(var);
+console.warn('Titulo', var);
+console.error(var);
+console.error('Titulo', var);
 
 * Biblioteca de comandos:
 onChangeText={text => console.log(text)} => dispara um evento sempre que o conteúdo da caixa de texto muda.
