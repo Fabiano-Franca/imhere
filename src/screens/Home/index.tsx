@@ -16,10 +16,13 @@ export function Home() {
     }
 
     function handleParticipantRemove(name: string) {
+
+
+
         Alert.alert('Remover', `Remover o participante ${name}`, [
             {
                 text: 'Sim',
-                onPress: () => Alert.alert("Deletado!")
+                onPress: () => setParticipants(prevState => prevState.filter(participant => participant !== name))
             },
             {
                 text: 'Não',
@@ -51,15 +54,6 @@ export function Home() {
                 </Text>
             </TouchableOpacity>
         </View>
-        {/* 
-            ScrollView renderiza todos os seus componentes filhos de reação 
-            de uma só vez, mas isso tem uma desvantagem de desempenho.
-
-            FlatList renderiza itens lentamente, quando eles estão prestes a 
-            aparecer, e remove itens que rolam para fora da tela para 
-            economizar memória e tempo de processamento.
-            
-        */}
         <FlatList 
             data={participants}
             keyExtractor={item => item}
